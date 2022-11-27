@@ -4,6 +4,6 @@
 //functions
 int createMat(int mat[10][10]);
 int isPath(int mat[10][10]);
-int shortestP(int i, int j);
+int shortestP(int mat[10][10]);
 
 #endif //HW1_MY_MAT_H

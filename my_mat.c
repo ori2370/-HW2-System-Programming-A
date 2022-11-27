@@ -23,8 +23,11 @@ int isPath(int mat[10][10]){
     return 1;
 }
 
-int shortestP(int i, int j){
-
+int shortestP(int mat[10][10]){
+    int i, j;
+    scanf("%d", &i);
+    scanf("%d", &j);
+    
 }
 
 int main(){
