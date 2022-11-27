@@ -27,7 +27,8 @@ int shortestP(int mat[10][10]){
     int a, b;
     scanf("%d", &a);
     scanf("%d", &b);
-    if(a==b){return -1;}
+    if(a==b){printf("-1\n");
+             return -1;}
 //no path
   int shortMat[10][10], i, j, k;
   for (i = 0; i < 10; i++){
@@ -48,6 +49,8 @@ int shortestP(int mat[10][10]){
     }
   }
    if(shortMat[a][b]== INFINITY)
-     {return -1;}
-  return shortMat[a][b];
+   {printf("-1\n");
+       return -1;}else{
+printf("%d\n",shortMat[a][b]);
+       return 1;}
 }
