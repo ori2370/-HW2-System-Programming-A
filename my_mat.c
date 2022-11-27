@@ -1,5 +1,6 @@
 #include "my_mat.h"
 #include <stdio.h>
+#define INFINITY 2147483647
 
 int createMat(int mat[10][10]){
     int num;
@@ -17,21 +18,36 @@ int isPath(int mat[10][10]){
     scanf("%d", &i);
     scanf("%d", &j);
     if(mat[i][j] == 0){
-        printf("False");
+        printf("False\n");
         return 1;}
-    printf("True");
+    printf("True\n");
     return 1;
 }
-
 int shortestP(int mat[10][10]){
-    int i, j;
-    scanf("%d", &i);
-    scanf("%d", &j);
-    
-}
+    int a, b;
+    scanf("%d", &a);
+    scanf("%d", &b);
+    if(a==b){return -1;}
+//no path
+  int shortMat[10][10], i, j, k;
+  for (i = 0; i < 10; i++){
+    for (j = 0; j < 10; j++){
+        if(i != j && mat[i][j]==0){
+            shortMat[i][j]= INFINITY;
+        }else
+      shortMat[i][j] = mat[i][j];
+    }
+  }
 
-int main(){
-    int num = (int)'B';
-    printf("%d" ,num);
-    return 0;
+  for (i = 0; i < 10; i++) {
+    for (j = 0; j < 10; j++) {
+      for (k = 0; k < 10; k++) {
+        if (shortMat[j][k]>shortMat[j][i] + shortMat[i][k]){
+          shortMat[j][k] = shortMat[j][i] + shortMat[i][k];}
+      }
+    }
+  }
+   if(shortMat[a][b]== INFINITY)
+     {return -1;}
+  return shortMat[a][b];
 }
