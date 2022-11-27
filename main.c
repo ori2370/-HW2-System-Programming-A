@@ -17,7 +17,7 @@ int main(){
             break;
 
         case 'C':
-            shortestP(nat);
+            shortestP(mat);
             break;
         
         default:
