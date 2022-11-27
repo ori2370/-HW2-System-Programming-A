@@ -1,6 +1,6 @@
 #include "my_mat.h"
 #include <stdio.h>
-#define INFINITY 2147483647
+#define INFINITY 1111
 
 int createMat(int mat[10][10]){
     int num;
