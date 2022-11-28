@@ -10,7 +10,7 @@ int createMat(int mat[10][10]){
             mat[i][j] = num;
         }
     }
-    return 1;
+    return 0;
 }
 
 int isPath(int mat[10][10]){
@@ -21,14 +21,14 @@ int isPath(int mat[10][10]){
         printf("False\n");
         return 1;}
     printf("True\n");
-    return 1;
+    return 0;
 }
 int shortestP(int mat[10][10]){
     int a, b;
     scanf("%d", &a);
     scanf("%d", &b);
     if(a==b){printf("-1\n");
-             return -1;}
+             return 0;}
 //no path
   int shortMat[10][10], i, j, k;
   for (i = 0; i < 10; i++){
@@ -50,7 +50,8 @@ int shortestP(int mat[10][10]){
   }
    if(shortMat[a][b]== INFINITY)
    {printf("-1\n");
-       return -1;}else{
+       }else{
 printf("%d\n",shortMat[a][b]);
-       return 1;}
+       }
+    return 0
 }
