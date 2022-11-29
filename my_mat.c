@@ -48,10 +48,8 @@ int shortestP(int mat[10][10]){
       }
     }
   }
-   if(shortMat[a][b]== INFINITY)
-   {printf("-1\n");
-       }else{
-printf("%d\n",shortMat[a][b]);
-       }
-    return 0
-}
+   if(shortMat[a][b]== INFINITY){
+    printf("-1\n");
+    }else{
+    printf("%d\n",shortMat[a][b]);}
+    return 0;}
