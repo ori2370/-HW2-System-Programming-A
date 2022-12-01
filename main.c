@@ -16,8 +16,8 @@ int main(){
             isPath(mat);
             break;
 
-        case 'C':
-            shortestP(mat);
+            case 'C':
+                printf("%d\n",shortestP(mat));
             break;
         
         default:
