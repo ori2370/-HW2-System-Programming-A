@@ -9,15 +9,15 @@ int main(){
         switch (input)
         {
         case 'A':
-            int x = createMat(mat);
+            createMat(mat);
             break;
 
         case 'B':
-            int y = isPath(mat);
+            isPath(mat);
             break;
 
         case 'C':
-            int z = shortestP(mat);
+            shortestP(mat);
             break;
         
         default:

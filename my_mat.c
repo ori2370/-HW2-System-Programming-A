@@ -1,11 +1,12 @@
 #include "my_mat.h"
 #include <stdio.h>
 #define INFINITY 1111
+#define MSIZE 10
 
-int createMat(int mat[10][10]){
+int createMat(int mat[MSIZE][MSIZE]){
     int num;
-    for(int i = 0; i < 10; i++){
-        for(int j = 0; j < 10; j++){
+    for(int i = 0; i < MSIZE; i++){
+        for(int j = 0; j < MSIZE; j++){
             scanf("%d", &num);
             mat[i][j] = num;
         }
@@ -13,26 +14,26 @@ int createMat(int mat[10][10]){
     return 0;
 }
 
-int isPath(int mat[10][10]){
+int isPath(int mat[MSIZE][MSIZE]){
     int i, j;
     scanf("%d", &i);
     scanf("%d", &j);
     if(mat[i][j] == 0){
         printf("False\n");
-        return 1;}
+        return 0;}
     printf("True\n");
     return 0;
 }
-int shortestP(int mat[10][10]){
+int shortestP(int mat[MSIZE][MSIZE]){
     int a, b;
     scanf("%d", &a);
     scanf("%d", &b);
     if(a==b){printf("-1\n");
              return 0;}
 //no path
-  int shortMat[10][10], i, j, k;
-  for (i = 0; i < 10; i++){
-    for (j = 0; j < 10; j++){
+  int shortMat[MSIZE][MSIZE], i, j;
+  for (i = 0; i < MSIZE; i++){
+    for (j = 0; j < MSIZE; j++){
         if(i != j && mat[i][j]==0){
             shortMat[i][j]= INFINITY;
         }else
@@ -40,9 +41,9 @@ int shortestP(int mat[10][10]){
     }
   }
 
-  for (i = 0; i < 10; i++) {
-    for (j = 0; j < 10; j++) {
-      for (k = 0; k < 10; k++) {
+  for (i = 0; i < MSIZE; i++) {
+    for (j = 0; j < MSIZE; j++) {
+      for (int k = 0; k < MSIZE; k++) {
         if (shortMat[j][k]>shortMat[j][i] + shortMat[i][k]){
           shortMat[j][k] = shortMat[j][i] + shortMat[i][k];}
       }
