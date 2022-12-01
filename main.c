@@ -3,21 +3,21 @@
 
 int main(){
     int mat[10][10];
-    char input;
+    char input = 'a';
     while(input != 'D'){
         scanf("%c", &input);
         switch (input)
         {
         case 'A':
-            createMat(mat);
+            int x = createMat(mat);
             break;
 
         case 'B':
-            isPath(mat);
+            int y = isPath(mat);
             break;
 
         case 'C':
-            shortestP(mat);
+            int z = shortestP(mat);
             break;
         
         default:
